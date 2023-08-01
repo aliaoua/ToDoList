@@ -26,13 +26,13 @@ const itemsSchema = {
 const Item = new mongoose.model("Item", itemsSchema);
 
 const washing = new Item({
-  name: "washing",
+  name: "eya 9echda",
 });
 const cooking = new Item({
-  name: "cooking",
+  name: "fifi abdou",
 });
 const cleaning = new Item({
-  name: "cleaning",
+  name: "eya sem7a",
 });
 const defaultItems = [washing, cooking, cleaning];
 const listSchema = {
@@ -52,7 +52,10 @@ app.get("/", function (req, res) {
           });
         res.redirect("/");
       } else {
-        res.render("list", { listTitle: "Today", newListItems: foundItems });
+        res.render("list", {
+          listTitle: "Karbouchti lmezyana",
+          newListItems: foundItems,
+        });
       }
     })
     .catch((err) => {
