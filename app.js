@@ -86,7 +86,7 @@ app.post("/", (req, res) => {
   const item = new Item({
     name: itemName,
   });
-  if (listName === "Today") {
+  if (listName === "Karbouchti lmezyana") {
     item.save();
     res.redirect("/");
   } else {
@@ -100,7 +100,7 @@ app.post("/", (req, res) => {
 app.post("/delete", (req, res) => {
   checkedItemId = req.body.checkbox;
   const listName = req.body.listName;
-  if (listName === "Today") {
+  if (listName === "Karbouchti lmezyana") {
     Item.findByIdAndRemove(checkedItemId)
       .exec()
       .then(() => {
